@@ -4,6 +4,7 @@
   <rm:property key="resolveFrom" value="release"/>
 
   <rm:locator pattern="^org\.palladiosimulator\.pcm\.editor.*" searchPathRef="TreeEditors" failOnError="true"/>
+  <rm:locator pattern="^org\.palladiosimulator\.editors\.tree.*" searchPathRef="TreeEditors" failOnError="true"/>
 
   <rm:redirect pattern=".*"
 		href="https://raw.githubusercontent.com/PalladioSimulator/Palladio-Editors-Commons/master/org.palladiosimulator.editors.commons.buckminster/editors.rmap" />

@@ -1,6 +1,6 @@
 Palladio-Editors-Tree
 =====================
-Plugins for tree editors for models of the Palladio Component Model (PCM).
+Tree editors for models of the Palladio Component Model (PCM).
 
 
 Eclipse Update Sites

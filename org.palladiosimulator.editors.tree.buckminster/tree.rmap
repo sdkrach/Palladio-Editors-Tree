@@ -6,7 +6,7 @@
   <rm:locator pattern="^org\.palladiosimulator\.pcm\.editor.*" searchPathRef="TreeEditors" failOnError="true"/>
 
   <rm:redirect pattern=".*"
-		href="https://raw.githubusercontent.com/PalladioSimulator/Palladio-Editors-Tree/master/org.palladiosimulator.editors.tree.buckminster/editors.rmap" />
+		href="https://raw.githubusercontent.com/PalladioSimulator/Palladio-Editors-Commons/master/org.palladiosimulator.editors.commons.buckminster/editors.rmap" />
 		
   <rm:searchPath name="TreeEditors">
     <rm:provider componentTypes="eclipse.feature,osgi.bundle,buckminster" readerType="git" resolutionFilter="" source="true">

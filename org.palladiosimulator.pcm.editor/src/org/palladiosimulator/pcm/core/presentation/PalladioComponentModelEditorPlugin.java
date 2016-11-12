@@ -25,7 +25,7 @@ public final class PalladioComponentModelEditorPlugin extends EMFPlugin {
      * 
      * @generated
      */
-    public static final String copyright = "Copyright 2005-2015 by palladiosimulator.org";
+    public static final String copyright = "Copyright 2005-2017 by palladiosimulator.org";
 
     /**
      * Keep track of the singleton. <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -47,13 +47,12 @@ public final class PalladioComponentModelEditorPlugin extends EMFPlugin {
      * @generated
      */
     public PalladioComponentModelEditorPlugin() {
-        super(new ResourceLocator[]
-                {
+        super(new ResourceLocator[] {
                 IdentifierEditPlugin.INSTANCE,
                 ProbabilityFunctionEditPlugin.INSTANCE,
                 StoexEditPlugin.INSTANCE,
                 UnitsEditPlugin.INSTANCE,
-                });
+        });
     }
 
     /**

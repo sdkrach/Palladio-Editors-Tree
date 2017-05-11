@@ -457,9 +457,8 @@ public class SubsystemEditor extends MultiPageEditorPart
                     @Override
                     public boolean visit(final IResourceDelta delta) {
                         if (delta.getResource().getType() == IResource.FILE) {
-                            if (delta.getKind() == IResourceDelta.REMOVED ||
-                                    delta.getKind() == IResourceDelta.CHANGED
-                                            && delta.getFlags() != IResourceDelta.MARKERS) {
+                            if (delta.getKind() == IResourceDelta.REMOVED || delta.getKind() == IResourceDelta.CHANGED
+                                    && delta.getFlags() != IResourceDelta.MARKERS) {
                                 final Resource resource = this.resourceSet.getResource(
                                         URI.createPlatformResourceURI(delta.getFullPath().toString(), true), false);
                                 if (resource != null) {
@@ -595,11 +594,8 @@ public class SubsystemEditor extends MultiPageEditorPart
      */
     protected void updateProblemIndication() {
         if (this.updateProblemIndication) {
-            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK,
-                    "org.palladiosimulator.pcm.editor",
-                    0,
-                    null,
-                    new Object[] { this.editingDomain.getResourceSet() });
+            final BasicDiagnostic diagnostic = new BasicDiagnostic(Diagnostic.OK, "org.palladiosimulator.pcm.editor", 0,
+                    null, new Object[] { this.editingDomain.getResourceSet() });
             for (final Diagnostic childDiagnostic : this.resourceToDiagnosticMap.values()) {
                 if (childDiagnostic.getSeverity() != Diagnostic.OK) {
                     diagnostic.add(childDiagnostic);
@@ -646,8 +642,7 @@ public class SubsystemEditor extends MultiPageEditorPart
      * @generated
      */
     protected boolean handleDirtyConflict() {
-        return MessageDialog.openQuestion(this.getSite().getShell(),
-                getString("_UI_FileConflict_label"),
+        return MessageDialog.openQuestion(this.getSite().getShell(), getString("_UI_FileConflict_label"),
                 getString("_WARN_FileConflict"));
     }
 
@@ -981,19 +976,14 @@ public class SubsystemEditor extends MultiPageEditorPart
         final boolean hasErrors = !resource.getErrors().isEmpty();
         if (hasErrors || !resource.getWarnings().isEmpty()) {
             final BasicDiagnostic basicDiagnostic = new BasicDiagnostic(
-                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
-                    "org.palladiosimulator.pcm.editor",
-                    0,
+                    hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING, "org.palladiosimulator.pcm.editor", 0,
                     getString("_UI_CreateModelError_message", resource.getURI()),
                     new Object[] { exception == null ? (Object) resource : exception });
             basicDiagnostic.merge(EcoreUtil.computeDiagnostic(resource, true));
             return basicDiagnostic;
         } else if (exception != null) {
-            return new BasicDiagnostic(Diagnostic.ERROR,
-                    "org.palladiosimulator.pcm.editor",
-                    0,
-                    getString("_UI_CreateModelError_message", resource.getURI()),
-                    new Object[] { exception });
+            return new BasicDiagnostic(Diagnostic.ERROR, "org.palladiosimulator.pcm.editor", 0,
+                    getString("_UI_CreateModelError_message", resource.getURI()), new Object[] { exception });
         } else {
             return Diagnostic.OK_INSTANCE;
         }
@@ -1692,8 +1682,8 @@ public class SubsystemEditor extends MultiPageEditorPart
      */
     public void setStatusLineManager(final ISelection selection) {
         final IStatusLineManager statusLineManager = this.currentViewer != null
-                && this.currentViewer == this.contentOutlineViewer
-                        ? this.contentOutlineStatusLineManager : this.getActionBars().getStatusLineManager();
+                && this.currentViewer == this.contentOutlineViewer ? this.contentOutlineStatusLineManager
+                        : this.getActionBars().getStatusLineManager();
 
         if (statusLineManager != null) {
             if (selection instanceof IStructuredSelection) {

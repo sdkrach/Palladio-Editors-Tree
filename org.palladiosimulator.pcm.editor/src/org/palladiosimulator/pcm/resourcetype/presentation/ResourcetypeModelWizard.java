@@ -263,9 +263,8 @@ public class ResourcetypeModelWizard extends Wizard implements INewWizard {
             // Open an editor on the new file.
             //
             try {
-                page.openEditor(new FileEditorInput(modelFile),
-                        this.workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString())
-                                .getId());
+                page.openEditor(new FileEditorInput(modelFile), this.workbench.getEditorRegistry()
+                        .getDefaultEditor(modelFile.getFullPath().toString()).getId());
             } catch (final PartInitException exception) {
                 MessageDialog.openError(workbenchWindow.getShell(),
                         PalladioComponentModelEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"),

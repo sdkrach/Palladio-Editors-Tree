@@ -47,12 +47,8 @@ public final class PalladioComponentModelEditorPlugin extends EMFPlugin {
      * @generated
      */
     public PalladioComponentModelEditorPlugin() {
-        super(new ResourceLocator[] {
-                IdentifierEditPlugin.INSTANCE,
-                ProbabilityFunctionEditPlugin.INSTANCE,
-                StoexEditPlugin.INSTANCE,
-                UnitsEditPlugin.INSTANCE,
-        });
+        super(new ResourceLocator[] { IdentifierEditPlugin.INSTANCE, ProbabilityFunctionEditPlugin.INSTANCE,
+                StoexEditPlugin.INSTANCE, UnitsEditPlugin.INSTANCE, });
     }
 
     /**

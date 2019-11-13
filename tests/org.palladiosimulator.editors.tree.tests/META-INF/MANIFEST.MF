@@ -4,5 +4,5 @@ Bundle-Name: Palladio Component Model - Tree Editor Tests
 Bundle-SymbolicName: org.palladiosimulator.editors.tree.tests
 Bundle-Version: 4.1.0.qualifier
 Bundle-Vendor: palladiosimulator.org
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.junit
